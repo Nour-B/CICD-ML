@@ -21,8 +21,8 @@ jobs:
           
           # Add plots to markdown
           echo "##Elbow method graph" >> report.md
-          echo "" The optimal number of clusters for k-means clustering is displayed below" >> report.md
-          echo "![Elbow graph](./inertia.png)">> report.md
+          echo " The optimal number of clusters for k-means clustering is displayed below" >> report.md
+          echo "![Elbow graph](./inertia.png)\n" >> report.md
 
           echo "##Kmeans graph" >> report.md
           echo "The KMeans predictions are displayed below" >> report.md
