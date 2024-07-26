@@ -18,15 +18,17 @@ jobs:
           pip3 install -r requirements.txt
           python3 preprocess_data.py
           python3 model.py
-
+          
+          # Add plots to markdown
           echo "##Elbow method graph" >> report.md
-          echo "" The optimal number of clusters for k-means clustering is displayed below"
-          cml-publish inertia.png --md >> report.md
+          echo "" The optimal number of clusters for k-means clustering is displayed below" >> report.md
+          echo "![Elbow graph](./inertia.png)">> report.md
 
           echo "##Kmeans graph" >> report.md
-          echo "" The KMeans predictions are displayed below"
-          cml-publish kmeans.png --md >> report.md
-
-          cml-send-comment report.md
+          echo "" The KMeans predictions are displayed below" >> report.md
+          echo "![Kmeans graph graph](./kmeans.png)">> report.md
+          
+          # Create comment from markdown report
+          cml comment create report.md
 
       
