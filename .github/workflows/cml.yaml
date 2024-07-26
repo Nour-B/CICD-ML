@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - name : "run KMeans"
         env: 
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # the ML workflow goes here
           mkdir processed_data
