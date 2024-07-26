@@ -30,6 +30,6 @@ jobs:
           echo "![Kmeans graph](./kmeans.png)" >> report.md
           
           # Create comment from markdown report
-          cml pr create report.md
+          cml pr create report.md **/*.png
 
       
